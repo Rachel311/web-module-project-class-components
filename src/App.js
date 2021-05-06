@@ -1,6 +1,7 @@
 import React from 'react';
 import TodoList from './components/TodoList'
-import TodoForm from './components/TodoForm'
+import TodoForm from './components/TodoForm';
+import Style from './components/Todo.css';
 
 const todo = [
   {
@@ -78,7 +79,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className={Style}>
         <h1>Welcome to your Todo App!</h1>
         <TodoList todo={this.state.todo} clearCompleted={this.clearCompleted} toggleCompleted={this.toggleCompleted}/>
         <br />
